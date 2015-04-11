@@ -3,15 +3,15 @@
   <head>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-    
+
         var output = function(text) {
-          $("body").append("<h2>"+text+"</h2>");
+          $("body").append("<h1>"+text+"</h1>");
         }
-        $.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/cooper%20union", function(response){
+        $.getJSON("http://cooper-union-search-proxy.herokuapp.com/twitter/search/brunch", function(brunch){
          
-          // console.log(response.statuses);
-          for(var i = 0; i<response.statuses.length; i++) {
-            output(response.statuses[i].text);
+       
+          for(var i = 0; i<brunch.statuses.length; i++) {
+            output(brunch.statuses[i].text);
           }
       });
     </script>
